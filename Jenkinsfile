@@ -2,8 +2,8 @@ pipeline {
   agent any
   stages {
     stage('Build') {
-      steps {
-        //bat 'setx -m JAVA_HOME "C:\\Program Files\\Java\\jdk1.8.0_191"'
+      steps { 
+        bat 'set -m MAVEN_HOME "C:\\Program Files\\apache-maven-3.6.3\\bin"'
         bat 'mvn clean'
         bat 'C:\\apache-maven-3.6.3\\bin\\mvn compile'
       }
