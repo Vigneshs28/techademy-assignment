@@ -6,17 +6,17 @@ pipeline {
     stage('Build') {
       steps {
         //bat 'mvn clean'
-          bat '$maven_home\\mvn compile'
+          bat "$maven_home\\mvn compile"
       }
     }
     stage('Test') {
       steps {
-        bat '$maven_home\\mvn test'
+        bat "$maven_home\\mvn test"
       }
     }
     stage('Deploy') {
       steps {
-        bat 'C:\\Program Files\\apache-maven-3.6.3\\bin\\mvn package'
+        bat "$maven_home\\mvn package"
       }
     }
   }
