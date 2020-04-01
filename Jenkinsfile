@@ -1,10 +1,13 @@
 pipeline {
   agent any
   stages {
+    def maven_home = "C:\Program Files\apache-maven-3.6.3\bin"
     stage('Build') {
       steps {
         //bat 'mvn clean'
-        bat 'C:\\Program~s\\apache-maven-3.6.3\\bin\\mvn compile'
+        dir(maven_home){
+          bat 'mvn compile'
+        }
       }
     }
     stage('Test') {
