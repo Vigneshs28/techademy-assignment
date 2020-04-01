@@ -1,4 +1,4 @@
-def maven_home = "C:\\Program~1\\apache-maven-3.6.3\\bin"
+def maven_home = "C:\\apache-maven-3.6.3\\bin"
 
 pipeline {
   agent any
