@@ -6,14 +6,12 @@ pipeline {
     stage('Build') {
       steps {
         //bat 'mvn clean'
-        dir(maven_home){
-          bat 'mvn compile'
-        }
+          bat '$maven_home\\mvn compile'
       }
     }
     stage('Test') {
       steps {
-        bat 'C:\\Program Files\\apache-maven-3.6.3\\bin\\mvn test'
+        bat '$maven_home\\mvn test'
       }
     }
     stage('Deploy') {
