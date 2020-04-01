@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'setx -m JAVA_HOME "C:\Program Files\Java\jdk1.8.0_191"'
+        bat 'setx -m JAVA_HOME "C:\\Program Files\\Java\\jdk1.8.0_191"'
         bat 'C:\\apache-maven-3.6.3\\bin\\mvn clean'
         bat 'C:\\apache-maven-3.6.3\\bin\\mvn compile'
       }
